@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宁波北涵精密机电有限公司 - 专业油水雾拦截解决方案</title>
+<meta name="description" content="宁波北涵精密机电有限公司，专注油水雾拦截装置研发制造，16项专利技术，内循环零排放，99.99%净化率，为机械加工、环保、制药、食品行业提供专业废气净化解决方案。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a5c;--primary-dark:#0f2540;--primary-light:#2c5282;--accent:#e87722;--accent-light:#f59e42;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-300:#cbd5e1;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--gray-700:#334155;--gray-800:#1e293b;--gray-900:#0f172a;--white:#fff;--success:#10b981;--danger:#ef4444}
+html{scroll-behavior:smooth}
+body{font-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",Arial,sans-serif;color:var(--gray-800);line-height:1.6;background:var(--white);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:36px;font-weight:700;color:var(--primary);margin-bottom:12px;position:relative;display:inline-block}
+.section-title h2::after{content:"";position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:var(--accent);border-radius:2px}
+.section-title p{font-size:16px;color:var(--gray-500);margin-top:16px}
+
+/* 导航栏 */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,58,92,0.95);backdrop-filter:blur(10px);transition:all .3s ease;box-shadow:0 2px 20px rgba(0,0,0,0.1)}
+.navbar.scrolled{background:rgba(15,37,64,0.98);box-shadow:0 4px 30px rgba(0,0,0,0.2)}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--white);font-size:22px;font-weight:700;letter-spacing:1px}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),var(--accent-light));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:var(--white)}
+.nav-menu{display:flex;gap:8px}
+.nav-menu a{color:rgba(255,255,255,0.85);padding:8px 16px;border-radius:6px;font-size:15px;transition:all .25s ease;position:relative}
+.nav-menu a:hover{color:var(--white);background:rgba(255,255,255,0.1)}
+.nav-menu a.active{color:var(--accent-light)}
+.nav-cta{background:var(--accent);color:var(--white)!important;padding:8px 20px!important;border-radius:6px;font-weight:600}
+.nav-cta:hover{background:var(--accent-light)!important}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.mobile-toggle span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 50%,var(--primary-light) 100%);overflow:hidden;padding-top:70px}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 50%,rgba(232,119,34,0.08) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,255,255,0.05) 0%,transparent 40%);pointer-events:none}
+.hero-pattern{position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:600px;height:600px;opacity:0.06;pointer-events:none}
+.hero-pattern svg{width:100%;height:100%}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 24px;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,119,34,0.15);border:1px solid rgba(232,119,34,0.4);color:var(--accent-light);padding:6px 16px;border-radius:30px;font-size:14px;margin-bottom:24px}
+.hero-badge::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{font-size:52px;font-weight:800;color:var(--white);line-height:1.2;margin-bottom:20px;letter-spacing:-1px}
+.hero h1 span{color:var(--accent-light)}
+.hero-subtitle{font-size:20px;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:600px;line-height:1.7}
+.hero-tags{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.hero-tag{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);padding:8px 18px;border-radius:30px;font-size:14px;backdrop-filter:blur(5px)}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:all .3s ease;border:none;outline:none}
+.btn-primary{background:var(--accent);color:var(--white);box-shadow:0 4px 20px rgba(232,119,34,0.4)}
+.btn-primary:hover{background:var(--accent-light);transform:translateY(-2px);box-shadow:0 6px 25px rgba(232,119,34,0.5)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.4)}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,0.1);transform:translateY(-2px)}
+
+/* 数据统计 */
+.stats{background:var(--gray-50);padding:60px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.stat-item{text-align:center;padding:20px}
+.stat-number{font-size:48px;font-weight:800;color:var(--primary);line-height:1;margin-bottom:8px}
+.stat-number span{font-size:24px;color:var(--accent)}
+.stat-label{font-size:15px;color:var(--gray-500);font-weight:500}
+
+/* 关于我们 */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-image{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,var(--primary),var(--primary-light));display:flex;align-items:center;justify-content:center}
+.about-image-inner{text-align:center;color:var(--white);padding:40px}
+.about-image-inner .big-icon{font-size:80px;margin-bottom:20px;opacity:0.9}
+.about-image-inner h3{font-size:24px;margin-bottom:10px}
+.about-image-inner p{opacity:0.8;font-size:14px}
+.about-content h3{font-size:28px;color:var(--primary);margin-bottom:16px;font-weight:700}
+.about-content > p{color:var(--gray-600);margin-bottom:24px;font-size:15px;line-height:1.8}
+.about-advantages{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.advantage-card{background:var(--gray-50);border-radius:10px;padding:20px;border-left:3px solid var(--accent);transition:all .3s ease}
+.advantage-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,0.08)}
+.advantage-card h4{font-size:16px;color:var(--primary);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.advantage-card h4 .icon{font-size:20px}
+.advantage-card p{font-size:13px;color:var(--gray-500);line-height:1.6}
+
+/* 专利展示 */
+.patents{background:var(--gray-50)}
+.patent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.patent-item{background:var(--white);border:1px solid var(--gray-200);border-radius:8px;padding:14px 16px;font-size:13px;color:var(--gray-600);font-family:"Courier New",monospace;transition:all .25s;display:flex;align-items:center;gap:8px}
+.patent-item:hover{border-color:var(--accent);color:var(--primary);transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,0,0,0.06)}
+.patent-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;font-family:inherit}
+.patent-badge.invention{background:#fee2e2;color:#dc2626}
+.patent-badge.utility{background:#dbeafe;color:#2563eb}
+.patent-badge.design{background:#fef3c7;color:#d97706}
+
+/* 产品中心 */
+.products{background:var(--white)}
+.product-list{display:flex;flex-direction:column;gap:16px;max-width:900px;margin:0 auto}
+.product-item{background:var(--white);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden;transition:all .3s ease}
+.product-item:hover{border-color:var(--primary-light);box-shadow:0 8px 30px rgba(26,58,92,0.1)}
+.product-header{display:flex;align-items:center;gap:20px;padding:24px 28px;cursor:pointer;transition:background .2s}
+.product-header:hover{background:var(--gray-50)}
+.product-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;color:var(--white)}
+.product-info{flex:1}
+.product-info h3{font-size:20px;color:var(--primary);margin-bottom:4px;font-weight:700}
+.product-info p{font-size:14px;color:var(--gray-500)}
+.product-models{display:flex;gap:6px;flex-wrap:wrap}
+.product-model-tag{background:var(--gray-100);color:var(--gray-600);padding:3px 10px;border-radius:4px;font-size:12px;font-weight:500}
+.product-arrow{font-size:20px;color:var(--gray-400);transition:transform .3s;flex-shrink:0}
+.product-item.open .product-arrow{transform:rotate(180deg);color:var(--accent)}
+.product-detail{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.product-item.open .product-detail{max-height:800px}
+.product-detail-inner{padding:0 28px 28px;border-top:1px solid var(--gray-100)}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.detail-block h4{font-size:14px;color:var(--primary);margin-bottom:8px;font-weight:700;display:flex;align-items:center;gap:6px}
+.detail-block h4::before{content:"";width:3px;height:14px;background:var(--accent);border-radius:2px}
+.detail-block p,.detail-block li{font-size:14px;color:var(--gray-600);line-height:1.7}
+.detail-block ul{padding-left:0}
+.detail-block li{padding-left:16px;position:relative;margin-bottom:4px}
+.detail-block li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+.detail-full{grid-column:1/-1}
+
+/* 痛点与方案 */
+.pain-solution{background:linear-gradient(180deg,var(--gray-50) 0%,var(--white) 100%)}
+.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1000px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.08)}
+.ps-col{padding:36px}
+.ps-pain{background:linear-gradient(135deg,#fef2f2,#fee2e2)}
+.ps-solution{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:var(--white)}
+.ps-col h3{font-size:22px;margin-bottom:24px;font-weight:700;display:flex;align-items:center;gap:10px}
+.ps-pain h3{color:#dc2626}
+.ps-solution h3{color:var(--white)}
+.ps-item{display:flex;gap:12px;margin-bottom:18px;align-items:flex-start}
+.ps-item:last-child{margin-bottom:0}
+.ps-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:1px}
+.ps-pain .ps-icon{background:#fecaca;color:#dc2626}
+.ps-solution .ps-icon{background:rgba(255,255,255,0.2);color:var(--accent-light)}
+.ps-text h4{font-size:15px;margin-bottom:3px;font-weight:600}
+.ps-pain .ps-text h4{color:#991b1b}
+.ps-solution .ps-text h4{color:var(--white)}
+.ps-text p{font-size:13px;line-height:1.6}
+.ps-pain .ps-text p{color:#b91c1c;opacity:0.8}
+.ps-solution .ps-text p{color:rgba(255,255,255,0.8)}
+
+/* 应用领域 */
+.applications{background:var(--white)}
+.app-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.app-card{background:var(--gray-50);border-radius:12px;padding:32px 24px;text-align:center;transition:all .35s ease;border:1px solid transparent;position:relative;overflow:hidden}
+.app-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transition:transform .35s;transform-origin:left}
+.app-card:hover{transform:translateY(-6px);box-shadow:0 12px 35px rgba(0,0,0,0.1);border-color:var(--gray-200)}
+.app-card:hover::before{transform:scaleX(1)}
+.app-icon{font-size:48px;margin-bottom:16px}
+.app-card h3{font-size:18px;color:var(--primary);margin-bottom:10px;font-weight:700}
+.app-card p{font-size:13px;color:var(--gray-500);line-height:1.7}
+
+/* 询盘表单 */
+.inquiry{background:linear-gradient(135deg,var(--primary-dark),var(--primary));position:relative;overflow:hidden}
+.inquiry::before{content:"";position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(232,119,34,0.1) 0%,transparent 70%);pointer-events:none}
+.inquiry .section-title h2{color:var(--white)}
+.inquiry .section-title p{color:rgba(255,255,255,0.6)}
+.inquiry-wrapper{max-width:700px;margin:0 auto;position:relative;z-index:2}
+.inquiry-form{background:var(--white);border-radius:16px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:14px;color:var(--gray-700);margin-bottom:8px;font-weight:600}
+.form-group label .required{color:var(--danger);margin-left:2px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid var(--gray-200);border-radius:8px;font-size:14px;font-family:inherit;transition:all .25s;outline:none;background:var(--white)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(232,119,34,0.1)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-group .error-msg{color:var(--danger);font-size:12px;margin-top:5px;display:none}
+.form-group.has-error input,.form-group.has-error select{border-color:var(--danger)}
+.form-group.has-error .error-msg{display:block}
+.submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--accent),var(--accent-light));color:var(--white);border:none;border-radius:8px;font-size:17px;font-weight:700;cursor:pointer;transition:all .3s;letter-spacing:1px}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(232,119,34,0.4)}
+.submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success.show{display:block}
+.form-success .success-icon{width:80px;height:80px;background:var(--success);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--white);margin:0 auto 20px;animation:scaleIn .5s ease}
+@keyframes scaleIn{0%{transform:scale(0)}60%{transform:scale(1.1)}100%{transform:scale(1)}}
+.form-success h3{font-size:24px;color:var(--primary);margin-bottom:10px}
+.form-success p{color:var(--gray-500);font-size:15px}
+.form-success .back-btn{margin-top:24px;padding:10px 28px;background:var(--gray-100);color:var(--gray-700);border:none;border-radius:6px;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s}
+.form-success .back-btn:hover{background:var(--gray-200)}
+
+/* 联系我们 */
+.contact{background:var(--gray-50)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact-info h3{font-size:24px;color:var(--primary);margin-bottom:24px;font-weight:700}
+.contact-item{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.contact-icon{width:48px;height:48px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;color:var(--white)}
+.contact-text h4{font-size:15px;color:var(--gray-700);margin-bottom:4px;font-weight:600}
+.contact-text p{font-size:15px;color:var(--gray-600);line-height:1.6}
+.contact-text a{color:var(--accent);font-weight:600}
+.contact-text a:hover{text-decoration:underline}
+.contact-map{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.06);height:380px;position:relative}
+.map-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#e8f0f8,#d0e0f0);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.map-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(26,58,92,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(26,58,92,0.08) 1px,transparent 1px);background-size:40px 40px}
+.map-road{position:absolute;background:rgba(26,58,92,0.15)}
+.map-road.h1{top:40%;left:0;right:0;height:8px}
+.map-road.h2{top:70%;left:10%;right:0;height:6px}
+.map-road.v1{top:0;bottom:0;left:30%;width:8px}
+.map-road.v2{top:0;bottom:30%;left:65%;width:6px}
+.map-building{position:absolute;background:rgba(26,58,92,0.12);border-radius:4px}
+.map-pin{position:relative;z-index:2;text-align:center}
+.map-pin-icon{font-size:48px;animation:bounce 2s infinite;filter:drop-shadow(0 4px 8px rgba(232,119,34,0.4))}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.map-pin-label{background:var(--white);padding:8px 16px;border-radius:8px;font-size:13px;color:var(--primary);font-weight:600;margin-top:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);white-space:nowrap}
+
+/* 页脚 */
+.footer{background:var(--gray-900);color:rgba(255,255,255,0.7);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px}
+.footer-brand h3{color:var(--white);font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.footer-brand p{font-size:14px;line-height:1.8;margin-bottom:16px}
+.footer-contact-info{font-size:13px}
+.footer-contact-info div{margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.footer-col h4{color:var(--white);font-size:15px;margin-bottom:18px;font-weight:600;position:relative;padding-bottom:8px}
+.footer-col h4::after{content:"";position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--accent)}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;transition:color .2s}
+.footer-col ul li a:hover{color:var(--accent-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:20px 0;text-align:center;font-size:13px;color:rgba(255,255,255,0.4)}
+
+/* 悬浮询价按钮 */
+.float-inquiry{position:fixed;right:20px;bottom:80px;z-index:999;background:var(--accent);color:var(--white);padding:14px 20px;border-radius:50px;font-size:15px;font-weight:700;box-shadow:0 6px 25px rgba(232,119,34,0.5);cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:8px;border:none;animation:floatPulse 3s infinite}
+@keyframes floatPulse{0%,100%{box-shadow:0 6px 25px rgba(232,119,34,0.5)}50%{box-shadow:0 6px 35px rgba(232,119,34,0.7)}}
+.float-inquiry:hover{transform:translateY(-3px) scale(1.05);background:var(--accent-light)}
+.float-phone{position:fixed;right:20px;bottom:150px;z-index:999;width:52px;height:52px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--white);box-shadow:0 4px 20px rgba(26,58,92,0.4);cursor:pointer;transition:all .3s;text-decoration:none}
+.float-phone:hover{transform:scale(1.1);background:var(--primary-light)}
+
+/* 回到顶部 */
+.back-top{position:fixed;right:20px;bottom:220px;z-index:999;width:44px;height:44px;background:var(--white);border:1px solid var(--gray-200);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--gray-500);cursor:pointer;transition:all .3s;opacity:0;visibility:hidden}
+.back-top.show{opacity:1;visibility:visible}
+.back-top:hover{background:var(--primary);color:var(--white);border-color:var(--primary)}
+
+/* 响应式 */
+@media(max-width:992px){
+.hero h1{font-size:38px}
+.hero-subtitle{font-size:17px}
+.about-grid,.contact-grid,.ps-grid{grid-template-columns:1fr}
+.ps-grid{gap:0}
+.detail-grid{grid-template-columns:1fr}
+.stats-grid{grid-template-columns:repeat(2,1fr)}
+.app-grid{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:1fr 1fr}
+.nav-menu{display:none;position:absolute;top:70px;left:0;right:0;background:var(--primary-dark);flex-direction:column;padding:20px;gap:4px}
+.nav-menu.open{display:flex}
+.nav-menu a{padding:12px 16px}
+.mobile-toggle{display:flex}
+.section{padding:60px 0}
+.section-title h2{font-size:28px}
+.inquiry-form{padding:28px 20px}
+.form-row{grid-template-columns:1fr}
+}
+@media(max-width:576px){
+.hero h1{font-size:30px}
+.hero-subtitle{font-size:15px}
+.hero-tags{gap:8px}
+.hero-tag{font-size:12px;padding:6px 12px}
+.stats-grid{grid-template-columns:1fr 1fr;gap:16px}
+.stat-number{font-size:36px}
+.app-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+.product-header{padding:18px 16px;gap:12px}
+.product-icon{width:44px;height:44px;font-size:22px}
+.product-info h3{font-size:17px}
+.about-advantages{grid-template-columns:1fr}
+.float-inquiry{font-size:13px;padding:10px 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar" id="navbar">
+<div class="nav-container">
+<div class="logo"><div class="logo-icon">北</div><span>北涵精密</span></div>
+<ul class="nav-menu" id="navMenu">
+<li><a href="#home" class="active">首页</a></li>
+<li><a href="#about">关于我们</a></li>
+<li><a href="#products">产品中心</a></li>
+<li><a href="#pain">解决方案</a></li>
+<li><a href="#applications">应用领域</a></li>
+<li><a href="#contact">联系我们</a></li>
+<li><a href="#inquiry" class="nav-cta">在线询盘</a></li>
+</ul>
+<div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+<div class="hero-pattern">
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="80" stroke="white" stroke-width="1"/>
+<circle cx="100" cy="100" r="60" stroke="white" stroke-width="1"/>
+<circle cx="100" cy="100" r="40" stroke="white" stroke-width="1"/>
+<circle cx="100" cy="100" r="15" fill="white" opacity="0.3"/>
+<g stroke="white" stroke-width="1">
+<line x1="100" y1="20" x2="100" y2="5"/>
+<line x1="100" y1="180" x2="100" y2="195"/>
+<line x1="20" y1="100" x2="5" y2="100"/>
+<line x1="180" y1="100" x2="195" y2="100"/>
+<line x1="43" y1="43" x2="32" y2="32"/>
+<line x1="157" y1="157" x2="168" y2="168"/>
+<line x1="157" y1="43" x2="168" y2="32"/>
+<line x1="43" y1="157" x2="32" y2="168"/>
+</g>
+<g fill="white" opacity="0.4">
+<rect x="95" y="5" width="10" height="15"/>
+<rect x="95" y="180" width="10" height="15"/>
+<rect x="5" y="95" width="15" height="10"/>
+<rect x="180" y="95" width="15" height="10"/>
+</g>
+</svg>
+</div>
+<div class="hero-content">
+<div class="hero-badge">国家专利产品 · 专业油水雾处理团队</div>
+<h1>专业<span>油水雾拦截</span><br>解决方案提供商</h1>
+<p class="hero-subtitle">专注机械加工废气净化 · 16项专利技术 · 内循环零排放 · 为您的企业提供高效、环保、经济的废气处理方案</p>
+<div class="hero-tags">
+<span class="hero-tag">🏆 16项专利技术</span>
+<span class="hero-tag">🌿 节能环保零排放</span>
+<span class="hero-tag">💰 无耗材低成本</span>
+<span class="hero-tag">✨ 99.99%净化率</span>
+<span class="hero-tag">🔧 安装便捷</span>
+</div>
+<div class="hero-buttons">
+<a href="#inquiry" class="btn btn-primary">立即咨询 →</a>
+<a href="#products" class="btn btn-outline">了解产品</a>
+</div>
+</div>
+</section>
+
+<!-- 数据统计 -->
+<section class="stats">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item"><div class="stat-number" data-target="16">0<span>+</span></div><div class="stat-label">项自主研发专利</div></div>
+<div class="stat-item"><div class="stat-number" data-target="99.99">0<span>%</span></div><div class="stat-label">废气净化率</div></div>
+<div class="stat-item"><div class="stat-number" data-target="5">0<span>大</span></div><div class="stat-label">核心产品系列</div></div>
+<div class="stat-item"><div class="stat-number" data-target="10">0<span>+年</span></div><div class="stat-label">行业深耕经验</div></div>
+</div>
+</div>
+</section>
+
+<!-- 关于我们 -->
+<section class="section" id="about">
+<div class="container">
+<div class="section-title"><h2>关于我们</h2><p>专注精密机电制造 · 深耕油水雾拦截领域</p></div>
+<div class="about-grid">
+<div class="about-image">
+<div class="about-image-inner">
+<div class="big-icon">⚙️</div>
+<h3>宁波北涵精密机电有限公司</h3>
+<p>通用设备制造业 · 环境保护专用设备</p>
+<p style="margin-top:12px;font-size:13px;opacity:0.7">浙江省宁波市奉化区莼湖街道<br>滨海万洋众创城F15幢厂房301</p>
+</div>
+</div>
+<div class="about-content">
+<h3>专业制造 · 专利护航</h3>
+<p>宁波北涵精密机电有限公司是一家专注于机械零部件制造的企业，核心主营油水雾拦截装置系列产品。公司依托线下渠道积累了稳定的客户资源，致力于打破线下地域与渠道局限，全方位展示产品优势与制造实力，为客户提供专业、高效的废气净化解决方案。</p>
+<p>公司已申请多项专利形成专利池，对产品进行全方位保护。专注研究油水烟雾处理，专业团队研发，持续为机械加工、环保、制药、食品等行业提供优质产品与服务。</p>
+<div class="about-advantages">
+<div class="advantage-card"><h4><span class="icon">🏆</span>专利技术</h4><p>16项自主研发专利，专业团队形成专利池保护</p></div>
+<div class="advantage-card"><h4><span class="icon">🌿</span>节能环保</h4><p>内循环系统不外排、不产生臭氧、无安全隐患</p></div>
+<div class="advantage-card"><h4><span class="icon">💰</span>经济高效</h4><p>使用过程无耗材，无需经常维护，降低使用成本</p></div>
+<div class="advantage-card"><h4><span class="icon">🔧</span>适应性强</h4><p>可匹配各种排放油水烟雾机床，安装便捷售后无忧</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 专利展示 -->
+<section class="section patents">
+<div class="container">
+<div class="section-title"><h2>专利资质</h2><p>16项自主研发专利 · 技术实力的有力证明</p></div>
+<div class="patent-grid">
+<div class="patent-item"><span class="patent-badge invention">发明</span>201910109464.9</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202322417190.4</div>
+<div class="patent-item"><span class="patent-badge design">外观</span>202330576847.4</div>
+<div class="patent-item"><span class="patent-badge invention">发明</span>202510262797.0</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202520982750.7</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202511539042.7</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202522265405.4</div>
+<div class="patent-item"><span class="patent-badge invention">发明</span>202510262796.6</div>
+<div class="patent-item"><span class="patent-badge invention">发明</span>202510109081.7</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202122401300.9</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202520159588.9</div>
+<div class="patent-item"><span class="patent-badge invention">发明</span>201911160311.3</div>
+<div class="patent-item"><span class="patent-badge invention">发明</span>201911160310.9</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202520957970.4</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202511539041.2</div>
+<div class="patent-item"><span class="patent-badge invention">发明</span>202510642548.4</div>
+<div class="patent-item"><span class="patent-badge utility">实用</span>202522265404.X</div>
+</div>
+</div>
+</section>
+
+<!-- 产品中心 -->
+<section class="section products" id="products">
+<div class="container">
+<div class="section-title"><h2>产品中心</h2><p>5大核心产品系列 · 覆盖全场景油水雾处理需求</p></div>
+<div class="product-list">
+
+<!-- 产品1 内循环式 -->
+<div class="product-item">
+<div class="product-header" onclick="toggleProduct(this)">
+<div class="product-icon">🔄</div>
+<div class="product-info">
+<h3>内循环式油雾拦截器</h3>
+<p>直接安装机床 · 闭环处理 · 零外排</p>
+<div class="product-models" style="margin-top:6px"><span class="product-model-tag">Ⅰ型</span><span class="product-model-tag">Ⅱ型</span><span class="product-model-tag">Ⅱ+型</span></div>
+</div>
+<div class="product-arrow">▼</div>
+</div>
+<div class="product-detail"><div class="product-detail-inner">
+<div class="detail-grid">
+<div class="detail-block"><h4>产品组成</h4><p>内置风机和离心装置（甩油盘），Ⅰ型配单个220W甩油盘，Ⅱ型配双220W甩油盘，体积更大。</p></div>
+<div class="detail-block"><h4>核心用途</h4><p>直接安装在机床上，处理机床加工过程中切削液所产生的水雾、油雾和少量烟雾。</p></div>
+<div class="detail-block"><h4>工作原理</h4><ul><li>内部风机将机床内水雾、油雾、烟雾抽吸</li><li>经离心处理进行气液分离</li><li>净化空气通过内循环通道回流机床内部</li><li>循环过程中持续分离回收，实现气流循环、液体回流</li></ul></div>
+<div class="detail-block"><h4>核心优势</h4><ul><li>全程无需外接排气通道，节省空间</li><li>闭环处理，环保节能</li><li>不外排、不产生臭氧，无安全隐患</li><li>为工人健康提供有力保障</li></ul></div>
+<div class="detail-block detail-full"><h4>适用场景</h4><p>走心机、小型加工中心、刀塔机等需使用冷却油、切削液的设备，尤其适用于封闭环境的作业场景。</p></div>
+</div>
+</div></div>
+</div>
+
+<!-- 产品2 有组织排放式 -->
+<div class="product-item">
+<div class="product-header" onclick="toggleProduct(this)">
+<div class="product-icon">🏭</div>
+<div class="product-info">
+<h3>有组织排放式处理器</h3>
+<p>等离子前置预处理 · 延长净化器寿命</p>
+</div>
+<div class="product-arrow">▼</div>
+</div>
+<div class="product-detail"><div class="product-detail-inner">
+<div class="detail-grid">
+<div class="detail-block"><h4>产品组成</h4><p>内置离心装置，通过管道与排气系统连接。</p></div>
+<div class="detail-block"><h4>核心用途</h4><p>用于会产生低温废气且含水分和油份的场合，如机床、机械制造等行业。</p></div>
+<div class="detail-block"><h4>双重功能定位</h4><ul><li><strong>前道高效预处理：</strong>作为等离子处理器的前道工艺，有效拦截水油等污染物，为后续净化减轻负担</li><li><strong>后道精细深度处理：</strong>接入排气通道，作为最后一道工序，全方位确保排放气体洁净</li></ul></div>
+<div class="detail-block"><h4>核心价值</h4><ul><li>为净化器提供不含水分、油份和杂尘的废气</li><li>显著提高等离子净化器使用寿命</li><li>降低电场清洗周期，节省维护成本</li><li>满足高标准排放要求</li></ul></div>
+<div class="detail-block detail-full"><h4>适用场景</h4><p>适用于空间充裕、需要集中排放废气的机床等工业场合，作为等离子净化器的配套预处理设备。</p></div>
+</div>
+</div></div>
+</div>
+
+<!-- 产品3 无组织排放式 -->
+<div class="product-item">
+<div class="product-header" onclick="toggleProduct(this)">
+<div class="product-icon">💨</div>
+<div class="product-info">
+<h3>无组织排放式油烟处理器</h3>
+<p>专利甩油盘技术 · 高浓度工况专用</p>
+</div>
+<div class="product-arrow">▼</div>
+</div>
+<div class="product-detail"><div class="product-detail-inner">
+<div class="detail-grid">
+<div class="detail-block"><h4>产品组成</h4><p>内置离心装置和风机，采用公司专利发明的甩油盘。</p></div>
+<div class="detail-block"><h4>核心技术</h4><p>采用专利发明甩油盘，可直接通过管道与机床连接，省去繁琐中间环节。</p></div>
+<div class="detail-block"><h4>核心用途</h4><p>主要用于机床行业加工过程中所产生的水雾、油雾，通过离心作用将气流中的水雾、油雾分离并回收。</p></div>
+<div class="detail-block"><h4>产品效益</h4><ul><li>高效净化水油雾等有害杂质</li><li>迅速改善作业区域空气质量</li><li>从源头减少污染物对环境的影响</li><li>保障员工身体健康，提升生产效率</li></ul></div>
+<div class="detail-block detail-full"><h4>适用场景</h4><p>特别适用于喷塑、喷砂、喷漆等高浓度水油烟雾，且传统处理方式难以应对的复杂工况。也适用于机床及小型废气排放的无组织排放场合。</p></div>
+</div>
+</div></div>
+</div>
+
+<!-- 产品4 喷淋箱式 -->
+<div class="product-item">
+<div class="product-header" onclick="toggleProduct(this)">
+<div class="product-icon">🚿</div>
+<div class="product-info">
+<h3>喷淋箱式油雾拦截器</h3>
+<p>高温废气处理 · 化学喷淋+离心分离</p>
+</div>
+<div class="product-arrow">▼</div>
+</div>
+<div class="product-detail"><div class="product-detail-inner">
+<div class="detail-grid">
+<div class="detail-block"><h4>产品组成</h4><p>包括化学喷淋装置和离心装置，配备水位检测与限水报警系统。</p></div>
+<div class="detail-block"><h4>核心用途</h4><p>主要用于处理高温废气，如热处理、机械加工、炼钢、垃圾焚烧等会产生高温废气的行业。</p></div>
+<div class="detail-block"><h4>净化流程</h4><ul><li>高温废气通过管道进入喷淋箱</li><li>精细喷淋降温，化学分解硫化物、甲烷等成分</li><li>离心装置进行气液分离</li><li>洁净气体排出（可接等离子深度净化+活性炭吸附）</li></ul></div>
+<div class="detail-block"><h4>产品特点</h4><ul><li>结构紧凑，操作简便</li><li>水位实时检测，方便快捷</li><li>限水报警功能，水位异常及时提醒</li><li>新型油水雾分离技术，有效保护等离子极板</li></ul></div>
+<div class="detail-block detail-full"><h4>适用场景</h4><p>适用于工业、制药、食品等有烟雾的环境，以及热处理、炼钢、垃圾焚烧等高温废气处理场景。净化一条龙：降温、沉降、水油分离、杂质裂解一步到位。</p></div>
+</div>
+</div></div>
+</div>
+
+<!-- 产品5 一体式 -->
+<div class="product-item">
+<div class="product-header" onclick="toggleProduct(this)">
+<div class="product-icon">📦</div>
+<div class="product-info">
+<h3>一体式油水烟雾净化器</h3>
+<p>离心+等离子一体 · 机床安装即用</p>
+</div>
+<div class="product-arrow">▼</div>
+</div>
+<div class="product-detail"><div class="product-detail-inner">
+<div class="detail-grid">
+<div class="detail-block"><h4>产品组成</h4><p>由离心装置和等离子净化器组成一体式结构，通常安装在机床上。</p></div>
+<div class="detail-block"><h4>核心用途</h4><p>主要用于处理机床行业加工过程中所产生的水雾、油雾和烟雾。</p></div>
+<div class="detail-block"><h4>工作原理</h4><ul><li>含水雾、油雾、烟雾的废气进入设备</li><li>离心作用先将气流中的水雾、油雾分离回收</li><li>剩余烟雾经过等离子净化器净化处理</li><li>洁净空气排入大气（属于无组织排放）</li></ul></div>
+<div class="detail-block"><h4>核心优势</h4><ul><li>一体式设计，安装便捷，节省空间</li><li>离心预处理保护等离子极板，延长寿命</li><li>两级净化，处理效果更彻底</li><li>直接安装机床，即装即用</li></ul></div>
+<div class="detail-block detail-full"><h4>适用场景</h4><p>适用于各类机床加工场景，需要同时处理水雾、油雾和烟雾的工况。一体式设计省去复杂管道安装，适合空间有限、需要快速部署的生产环境。</p></div>
+</div>
+</div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- 痛点与解决方案 -->
+<section class="section pain-solution" id="pain">
+<div class="container">
+<div class="section-title"><h2>行业痛点与解决方案</h2><p>直击传统净化设备6大痛点 · 北涵专业方案逐一破解</p></div>
+<div class="ps-grid">
+<div class="ps-col ps-pain">
+<h3>⚠️ 传统设备痛点</h3>
+<div class="ps-item"><div class="ps-icon">✕</div><div class="ps-text"><h4>净化效果差</h4><p>传统喷淋净化系统净化效果通常只有60%左右，远达不到排放要求</p></div></div>
+<div class="ps-item"><div class="ps-icon">✕</div><div class="ps-text"><h4>极板污染失效</h4><p>等离子净化器极板易吸附水与油污，导致净化效果衰减甚至短路失效</p></div></div>
+<div class="ps-item"><div class="ps-icon">✕</div><div class="ps-text"><h4>臭氧+安全隐患</h4><p>等离子运行产生臭氧造成二次污染，机内高压电存在安全风险</p></div></div>
+<div class="ps-item"><div class="ps-icon">✕</div><div class="ps-text"><h4>滤芯成本高昂</h4><p>滤芯式净化器使用寿命有限，需定期更换滤芯，使用成本极高</p></div></div>
+<div class="ps-item"><div class="ps-icon">✕</div><div class="ps-text"><h4>高温废气影响</h4><p>高温使电场电阻变小、废气急速膨胀，导致净化效果下降</p></div></div>
+<div class="ps-item"><div class="ps-icon">✕</div><div class="ps-text"><h4>服务割裂</h4><p>大多数厂家管卖不管装，导致设备无法正确安装，影响使用效果</p></div></div>
+</div>
+<div class="ps-col ps-solution">
+<h3>✅ 北涵解决方案</h3>
+<div class="ps-item"><div class="ps-icon">✓</div><div class="ps-text"><h4>99.99%高净化率</h4><p>内循环多次分离+专利甩油盘技术，废气净化率达到99.99%</p></div></div>
+<div class="ps-item"><div class="ps-icon">✓</div><div class="ps-text"><h4>前置分离保护</h4><p>有组织排放式作为前置预处理，分离水油杂尘，保护等离子极板</p></div></div>
+<div class="ps-item"><div class="ps-icon">✓</div><div class="ps-text"><h4>零排放无污染</h4><p>内循环系统全程不外排、不产生臭氧，无高压电安全隐患</p></div></div>
+<div class="ps-item"><div class="ps-icon">✓</div><div class="ps-text"><h4>无耗材低成本</h4><p>离心分离物理方式，使用过程无耗材，无需经常维护更换</p></div></div>
+<div class="ps-item"><div class="ps-icon">✓</div><div class="ps-text"><h4>喷淋降温预处理</h4><p>喷淋箱式先对高温废气降温化学分解，再离心分离，效果稳定</p></div></div>
+<div class="ps-item"><div class="ps-icon">✓</div><div class="ps-text"><h4>全程服务保障</h4><p>专业团队上门安装调试，2小时内响应，全年技术维护支持</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 应用领域 -->
+<section class="section applications" id="applications">
+<div class="container">
+<div class="section-title"><h2>应用领域</h2><p>广泛应用于多个行业 · 专业适配不同工况需求</p></div>
+<div class="app-grid">
+<div class="app-card"><div class="app-icon">🏗️</div><h3>机械加工</h3><p>走心机、加工中心、刀塔机等切削液废气处理，适配各类机床油水烟雾净化需求</p></div>
+<div class="app-card"><div class="app-icon">🌱</div><h3>环保行业</h3><p>提供专业高效的油烟与油雾净化解决方案，灵活适配不同工况，严格满足环保排放标准</p></div>
+<div class="app-card"><div class="app-icon">💊</div><h3>制药行业</h3><p>洁净生产环境空气质量保障，严格满足制药行业高标准空气净化与环保排放要求</p></div>
+<div class="app-card"><div class="app-icon">🍔</div><h3>食品行业</h3><p>食品加工过程中油烟水雾处理，保障生产环境卫生安全，符合食品行业规范要求</p></div>
+</div>
+</div>
+</section>
+
+<!-- 在线询盘 -->
+<section class="section inquiry" id="inquiry">
+<div class="container">
+<div class="section-title"><h2>在线询盘</h2><p>填写您的需求 · 我们将在2小时内与您联系</p></div>
+<div class="inquiry-wrapper">
+<div class="inquiry-form" id="inquiryForm">
+<form id="contactForm" onsubmit="return submitForm(event)">
+<div class="form-row">
+<div class="form-group" id="nameGroup"><label>姓名<span class="required">*</span></label><input type="text" id="name" placeholder="请输入您的姓名"><div class="error-msg">请输入您的姓名</div></div>
+<div class="form-group" id="phoneGroup"><label>联系电话<span class="required">*</span></label><input type="tel" id="phone" placeholder="请输入手机号码"><div class="error-msg">请输入正确的手机号码</div></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>公司名称</label><input type="text" id="company" placeholder="请输入公司名称（选填）"></div>
+<div class="form-group"><label>意向产品</label>
+<select id="product">
+<option value="">请选择意向产品</option>
+<option value="内循环式">内循环式油雾拦截器</option>
+<option value="有组织排放式">有组织排放式处理器</option>
+<option value="无组织排放式">无组织排放式油烟处理器</option>
+<option value="喷淋箱式">喷淋箱式油雾拦截器</option>
+<option value="一体式">一体式油水烟雾净化器</option>
+<option value="复合集成方案">油水烟雾复合集成方案</option>
+<option value="其他">其他/需咨询</option>
+</select>
+</div>
+</div>
+<div class="form-group"><label>需求描述</label><textarea id="message" placeholder="请描述您的具体需求，如处理风量、工况环境、设备数量等（选填）"></textarea></div>
+<button type="submit" class="submit-btn" id="submitBtn">立即提交询盘</button>
+</form>
+</div>
+<div class="form-success" id="formSuccess">
+<div class="success-icon">✓</div>
+<h3>提交成功！</h3>
+<p>感谢您的咨询，我们将在2小时内与您联系！<br>如有紧急需求，请直接拨打：<strong style="color:var(--accent)">13377719667</strong></p>
+<button class="back-btn" onclick="resetForm()">继续提交</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 联系我们 -->
+<section class="section contact" id="contact">
+<div class="container">
+<div class="section-title"><h2>联系我们</h2><p>欢迎来电咨询 · 实地考察 · 洽谈合作</p></div>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>宁波北涵精密机电有限公司</h3>
+<div class="contact-item">
+<div class="contact-icon">📍</div>
+<div class="contact-text"><h4>公司地址</h4><p>浙江省宁波市奉化区莼湖街道滨海万洋众创城F15幢厂房301</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">📞</div>
+<div class="contact-text"><h4>联系电话</h4><p><a href="tel:13377719667">133-7771-9667</a></p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">📧</div>
+<div class="contact-text"><h4>电子邮箱</h4><p>service@beihanjd.com</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">🕐</div>
+<div class="contact-text"><h4>工作时间</h4><p>周一至周六 8:00 - 17:30</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">💬</div>
+<div class="contact-text"><h4>微信咨询</h4><p>添加手机号同号微信，获取产品资料与报价</p></div>
+</div>
+</div>
+<div class="contact-map">
+<div class="map-placeholder">
+<div class="map-grid"></div>
+<div class="map-road h1"></div>
+<div class="map-road h2"></div>
+<div class="map-road v1"></div>
+<div class="map-road v2"></div>
+<div class="map-building" style="top:15%;left:15%;width:80px;height:60px"></div>
+<div class="map-building" style="top:20%;left:55%;width:100px;height:50px"></div>
+<div class="map-building" style="top:50%;left:45%;width:70px;height:80px"></div>
+<div class="map-building" style="top:75%;left:20%;width:90px;height:55px"></div>
+<div class="map-building" style="top:80%;left:60%;width:110px;height:45px"></div>
+<div class="map-pin">
+<div class="map-pin-icon">📍</div>
+<div class="map-pin-label">北涵精密 · F15幢301</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<h3><div class="logo-icon" style="width:32px;height:32px;font-size:15px">北</div>北涵精密</h3>
+<p>宁波北涵精密机电有限公司，专注油水雾拦截装置研发制造，16项专利技术，为机械加工、环保、制药、食品行业提供专业废气净化解决方案。</p>
+<div class="footer-contact-info">
+<div>📍 宁波市奉化区滨海万洋众创城F15幢301</div>
+<div>📞 133-7771-9667</div>
+<div>📧 service@beihanjd.com</div>
+</div>
+</div>
+<div class="footer-col">
+<h4>快速导航</h4>
+<ul>
+<li><a href="#home">首页</a></li>
+<li><a href="#about">关于我们</a></li>
+<li><a href="#products">产品中心</a></li>
+<li><a href="#pain">解决方案</a></li>
+<li><a href="#applications">应用领域</a></li>
+<li><a href="#contact">联系我们</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>产品系列</h4>
+<ul>
+<li><a href="#products">内循环式油雾拦截器</a></li>
+<li><a href="#products">有组织排放式处理器</a></li>
+<li><a href="#products">无组织排放式处理器</a></li>
+<li><a href="#products">喷淋箱式油雾拦截器</a></li>
+<li><a href="#products">一体式油水烟雾净化器</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>服务支持</h4>
+<ul>
+<li><a href="#inquiry">在线询盘</a></li>
+<li><a href="#contact">技术咨询</a></li>
+<li><a href="#contact">安装指导</a></li>
+<li><a href="#contact">售后服务</a></li>
+<li><a href="#contact">定制方案</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 宁波北涵精密机电有限公司 版权所有 | 专注油水雾拦截解决方案</p>
+</div>
+</div>
+</footer>
+
+<!-- 悬浮按钮 -->
+<a href="tel:13377719667" class="float-phone" title="拨打电话">📞</a>
+<button class="float-inquiry" onclick="document.getElementById('inquiry').scrollIntoView({behavior:'smooth'})">💬 在线询价</button>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// 移动端菜单
+document.getElementById('mobileToggle').addEventListener('click',function(){
+document.getElementById('navMenu').classList.toggle('open');
+});
+document.querySelectorAll('.nav-menu a').forEach(function(a){
+a.addEventListener('click',function(){document.getElementById('navMenu').classList.remove('open');});
+});
+
+// 导航栏滚动效果
+window.addEventListener('scroll',function(){
+var navbar=document.getElementById('navbar');
+var backTop=document.getElementById('backTop');
+if(window.scrollY>50){navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');}
+if(window.scrollY>400){backTop.classList.add('show');}else{backTop.classList.remove('show');}
+// 导航高亮
+var sections=document.querySelectorAll('section[id]');
+var scrollPos=window.scrollY+100;
+sections.forEach(function(sec){
+var top=sec.offsetTop;var height=sec.offsetHeight;var id=sec.getAttribute('id');
+if(scrollPos>=top&&scrollPos<top+height){
+document.querySelectorAll('.nav-menu a').forEach(function(a){a.classList.remove('active');});
+var activeLink=document.querySelector('.nav-menu a[href="#'+id+'"]');
+if(activeLink)activeLink.classList.add('active');
+}
+});
+});
+
+// 产品手风琴
+function toggleProduct(header){
+var item=header.parentElement;
+var wasOpen=item.classList.contains('open');
+document.querySelectorAll('.product-item').forEach(function(i){i.classList.remove('open');});
+if(!wasOpen){item.classList.add('open');}
+}
+
+// 数字动画
+function animateNumbers(){
+document.querySelectorAll('.stat-number').forEach(function(el){
+var target=parseFloat(el.getAttribute('data-target'));
+var isFloat=target%1!==0;
+var current=0;var increment=target/60;
+var suffix=el.querySelector('span').outerHTML;
+var timer=setInterval(function(){
+current+=increment;
+if(current>=target){current=target;clearInterval(timer);}
+el.innerHTML=(isFloat?current.toFixed(2):Math.floor(current))+suffix;
+},20);
+});
+}
+var statsObserver=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if(entry.isIntersecting){animateNumbers();statsObserver.disconnect();}
+});
+},{threshold:0.3});
+statsObserver.observe(document.querySelector('.stats'));
+
+// 表单提交
+function submitForm(e){
+e.preventDefault();
+var valid=true;
+var name=document.getElementById('name').value.trim();
+var phone=document.getElementById('phone').value.trim();
+var nameGroup=document.getElementById('nameGroup');
+var phoneGroup=document.getElementById('phoneGroup');
+nameGroup.classList.remove('has-error');
+phoneGroup.classList.remove('has-error');
+if(!name){nameGroup.classList.add('has-error');valid=false;}
+if(!phone||!/^1[3-9]\d{9}$/.test(phone)){phoneGroup.classList.add('has-error');valid=false;}
+if(!valid)return false;
+var btn=document.getElementById('submitBtn');
+btn.disabled=true;btn.textContent='提交中...';
+setTimeout(function(){
+document.getElementById('contactForm').style.display='none';
+document.getElementById('formSuccess').classList.add('show');
+},800);
+return false;
+}
+function resetForm(){
+document.getElementById('contactForm').reset();
+document.getElementById('contactForm').style.display='block';
+document.getElementById('formSuccess').classList.remove('show');
+document.getElementById('submitBtn').disabled=false;
+document.getElementById('submitBtn').textContent='立即提交询盘';
+document.getElementById('nameGroup').classList.remove('has-error');
+document.getElementById('phoneGroup').classList.remove('has-error');
+}
+
+// 输入时清除错误
+document.getElementById('name').addEventListener('input',function(){document.getElementById('nameGroup').classList.remove('has-error');});
+document.getElementById('phone').addEventListener('input',function(){document.getElementById('phoneGroup').classList.remove('has-error');});
+</script>
+</body>
+</html>
